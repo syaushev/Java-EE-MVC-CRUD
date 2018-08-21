@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <title>JSF 2.0 Hello World</title>
+</h:head>
+<h:body>
+    <h2>CRUD Example JSF and Hibernate</h2>
+    <h2>Save student</h2>
+    <h:form>
+        <h:inputText value="#{studentController.name}"></h:inputText>
+        <h:commandButton value="Save" action="#{studentController.save}"></h:commandButton>
+    </h:form>
+   <h2>Delete student</h2>
+    <h:form>
+        <h:inputText value="#{studentController.id}"></h:inputText>
+        <h:commandButton value="Delete" action="#{studentController.delete}"></h:commandButton>
+    </h:form>
+    <h2>Find student by ID</h2>
+    <h:form>
+        <h:inputText value="#{studentController.id}"></h:inputText>
+        <h:commandButton value="Find" action="#{studentController.findStudentById}"> </h:commandButton>
+    </h:form>
+    <h2>Find All</h2>
+    <h:form>
+        <h:commandButton value="Find All" action="#{studentController.findAll}"> </h:commandButton>
+    </h:form>
+
+</h:body>
+</html>
